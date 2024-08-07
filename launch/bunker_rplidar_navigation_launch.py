@@ -52,6 +52,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'use_sim_time': 'False',
+                'usb_port': '/dev/ttyUSB1',
             }.items()
         ),
 
