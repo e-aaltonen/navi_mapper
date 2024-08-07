@@ -6,7 +6,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-    map_path = LaunchConfiguration('map_path')
+    map = LaunchConfiguration('map')
     map_launch_arg = DeclareLaunchArgument(
         'map',
         default_value="/home/agilex/map1.yaml"
@@ -90,7 +90,7 @@ def generate_launch_description():
             launch_arguments={
                 'use_sim_time': 'False',
                 'autostart': 'True',
-                'map': map_path,
+                'map': map,
             }.items()
         ),
 
